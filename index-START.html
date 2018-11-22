@@ -239,11 +239,14 @@
 
     const coordinates = {
     height: dropdownCoordinates.height,
-    width: dropdownCoordinates.width
+    width: dropdownCoordinates.width,
+    top: dropdownCoordinates.top - navigationCoordinates.top,
+    left: dropdownCoordinates.left - navigationCoordinates.left
     };
 
     background.style.setProperty('width',`${coordinates.width}px`);
-    background.style.setProperty('height', `${coordinates.height}px`)
+    background.style.setProperty('height', `${coordinates.height}px`);
+    background.style.setProperty('transform', `translate(${coordinates.left}px, ${coordinates.top}px)`);
   }
 
   function handleLeave(){
