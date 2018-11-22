@@ -224,7 +224,24 @@
   const background = document.querySelector(".dropdownBackground");
   const navigation = document.querySelector(".top");
 
-  
+  function handleEnter(){
+    console.log("enter");
+    this.classList.add('trigger-enter');
+    setTimeout(() => this.classList.add$("trigger-enter-active"), 150);
+    
+  }
+
+  function handleLeave(){
+    console.log("leave");
+  }
+
+  triggers.forEach(trigger => 
+    trigger.addEventListener("mouseenter", handleEnter)
+  );
+
+  triggers.forEach(trigger => {
+    trigger.addEventListener("mouseleave", handleLeave)
+  });
 </script>
 
 </body>
