@@ -236,6 +236,14 @@
     console.log(dropdownCoordinates);    
     const navigationCoordinates = navigation.getBoundingClientRect();
     console.log(navigationCoordinates);
+
+    const coordinates = {
+    height: dropdownCoordinates.height,
+    width: dropdownCoordinates.width
+    };
+
+    background.style.setProperty('width',`${coordinates.width}px`);
+    background.style.setProperty('height', `${coordinates.height}px`)
   }
 
   function handleLeave(){
